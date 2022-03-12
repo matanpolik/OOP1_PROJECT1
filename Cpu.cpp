@@ -9,7 +9,7 @@ void Cpu::setClockRate(double Scr){
 }
 void Cpu::setManufacturer(const string& Smanufacturer){
     if(Smanufacturer.length() > 10){
-        cout<<"manufacturer length is too long"<<endl;
+        cout<<"manufacturer length is too long";
     }
     else manufacturer = Smanufacturer;
 }
@@ -28,7 +28,7 @@ int Cpu::getYear(){
 }
 
 void Cpu::print(){
-    cout<<"Cpu clockRathe: "<<clockrate<<endl;
+    cout<<"Cpu clockRate: "<<clockrate<<endl;
     cout<<"Cpu manufacturer: "<<manufacturer<<endl;
     cout<<"Cpu year: "<<year<<endl;
 }
