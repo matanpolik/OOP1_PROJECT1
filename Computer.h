@@ -27,16 +27,16 @@ public:
     Computer(string manufacturer = "~", int year = 0, string color = "~", bool isLaptop = false) : manufacturer(std::move(manufacturer)), year(year), color(std::move(color)), isLaptop(isLaptop){}
 
     void setManufacturer(const string& Smanufacturer);
-    void setYear(int Syear);
-    void setColor(string Scolor);
+    void setYear(const int& Syear);
+    void setColor(const string& Scolor);
     void setCpu(Cpu Scpu);
-    void setIsLaptop(bool SisLaptop);
+    void setIsLaptop(const bool& SisLaptop);
 
-    string getManufacturer();
-    int getYear();
-    string getColor();
+    string getManufacturer() const;
+    int getYear() const;
+    string getColor() const;
     Cpu getCpu();
-    bool getIsLaptop();
+    bool getIsLaptop() const;
 
     void print();
 };

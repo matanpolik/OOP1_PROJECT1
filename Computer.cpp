@@ -10,32 +10,32 @@ void Computer::setManufacturer(const string& Smanufacturer){
     }
     else manufacturer = Smanufacturer;
 }
-void Computer::setYear(int Syear){
+void Computer::setYear(const int& Syear){
     year = Syear;
 }
-void Computer::setColor(string Scolor){
+void Computer::setColor(const string& Scolor){
     color = Scolor;
 }
 void Computer::setCpu(Cpu Scpu){
     cpu = Scpu;
 }
-void Computer::setIsLaptop(bool SisLaptop){
+void Computer::setIsLaptop(const bool& SisLaptop){
     isLaptop = SisLaptop;
 }
 
-string Computer::getManufacturer(){
+string Computer::getManufacturer() const{
     return manufacturer;
 }
-int Computer::getYear(){
+int Computer::getYear() const{
     return year;
 }
-string Computer::getColor(){
+string Computer::getColor() const{
     return color;
 }
 Cpu Computer::getCpu(){
     return cpu;
 }
-bool Computer::getIsLaptop(){
+bool Computer::getIsLaptop() const{
     return isLaptop;
 }
 void Computer::print() {

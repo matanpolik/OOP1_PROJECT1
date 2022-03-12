@@ -4,7 +4,7 @@
 
 #include "Cpu.h"
 
-void Cpu::setClockRate(double Scr){
+void Cpu::setClockRate(const double& Scr){
     clockrate = Scr;
 }
 void Cpu::setManufacturer(const string& Smanufacturer){
@@ -13,17 +13,17 @@ void Cpu::setManufacturer(const string& Smanufacturer){
     }
     else manufacturer = Smanufacturer;
 }
-void Cpu::setYear(int Syear){
+void Cpu::setYear(const int& Syear){
     year = Syear;
 }
 
-double Cpu::getClockRate(){
+double Cpu::getClockRate() const{
     return clockrate;
 }
-string Cpu::getManufacturer(){
+string Cpu::getManufacturer() const{
     return manufacturer;
 }
-int Cpu::getYear(){
+int Cpu::getYear() const{
     return year;
 }
 

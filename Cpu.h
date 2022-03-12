@@ -21,13 +21,13 @@ class Cpu {
 public:
     Cpu(double clockrate = 0, string  manufacturer = "~", int year = 0) : clockrate(clockrate), manufacturer(std::move(manufacturer)), year(year){}
 
-    void setClockRate(double Scr);
+    void setClockRate(const double& Scr);
     void setManufacturer(const string& Smanufacturer);
-    void setYear(int Syear);
+    void setYear(const int& Syear);
 
-    double getClockRate();
-    string getManufacturer();
-    int getYear();
+    double getClockRate() const;
+    string getManufacturer() const;
+    int getYear() const;
 
     void print();
 
