@@ -9,7 +9,7 @@ void Cpu::setClockRate(double Scr){
 }
 void Cpu::setManufacturer(const string& Smanufacturer){
     if(Smanufacturer.length() > 10){
-        cout<<"manufacturer length is too long";
+        cout<<"manufacturer length is too long"<<endl;
     }
     else manufacturer = Smanufacturer;
 }

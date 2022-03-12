@@ -28,43 +28,52 @@ void Store::addComputer(const Computer& computer){
 }
 
 void Store::printComputersByName(){
-    int count=1;
-    Computer temp;
+    Computer* temp[MAX_COMPUTERS_NUMBER];
+    Computer* temp2;
+    for(int i=0; i<numberOfComputers; i++){
+        temp[i]= &Computers[i];
+    }
     if(numberOfComputers>1){
         for (int i = 0; i < numberOfComputers; ++i) {
-            for (int j = 0; j < numberOfComputers - i; ++j) {
-                if (Computers[j].getManufacturer() > Computers[j + 1].getManufacturer()) {
-                    temp = Computers[j];
-                    Computers[j] = Computers[j + 1];
-                    Computers[j + 1] = temp;
-                }
-            }
-        }
-    }
-    cout<<"There are "<<numberOfComputers<<" computers in the store. The computers:"<<endl;
-    while(count<=numberOfComputers){
-        cout<<"Computer "<<count<<endl;
-        Computers[count-1].print();
-        count++;
-    }
-}
-void Store::printComputersByYear(){
-    int count=1;
-    Computer temp;
-    if(numberOfComputers>1){
-        for (int i = 0; i < numberOfComputers; ++i) {
-            for (int j = 0; j < numberOfComputers - i; ++j) {
-                if (Computers[j].getYear() > Computers[j + 1].getYear()) {
-                    temp = Computers[j];
-                    Computers[j] = Computers[j + 1];
-                    Computers[j + 1] = temp;
+            for (int j = 0; j < (numberOfComputers - 1) - i; ++j) {
+                if (temp[j]->getManufacturer() > temp[j + 1]->getManufacturer()) {
+                    temp2 = temp[j];
+                    temp[j] = temp[j+1];
+                    temp[j+1] = temp2;
                 }
             }
         }
     }
     cout<<"There are "<<numberOfComputers<<" computers in the store. The computers:"<<endl;
     for (int i = 0; i < numberOfComputers; ++i) {
-        cout<<"Computer "<<i+1<<":"<<endl;
-        Computers[i].print();
+        cout<<"Computer "<<i+1<<endl;
+        temp[i]->print();
+    }
+}
+void Store::printComputersByYear(){
+    int count=1;
+    Computer* temp[MAX_COMPUTERS_NUMBER];
+    Computer* temp2;
+    for(int i=0; i<numberOfComputers; i++){
+        temp[i] = &Computers[i];
+    }
+
+    if(numberOfComputers>1){
+        for (int i = 0; i < numberOfComputers; ++i) {
+            for (int j = 0; j < (numberOfComputers - 1)-i; ++j) {
+                if (temp[j]->getYear() > temp[j + 1]->getYear()) {
+                    temp2 = temp[j];
+                    temp[j] = temp[j + 1];
+                    temp[j + 1] = temp2;
+                }
+            }
+        }
+    }
+
+
+    cout<<"There are "<<numberOfComputers<<" computers in the store. The computers:"<<endl;
+    for (int i = 0; i < numberOfComputers; ++i) {
+        cout<<"Computer "<<i+1<<endl;
+        temp[i]->print();
     }
 }

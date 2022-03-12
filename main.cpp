@@ -40,7 +40,7 @@ int main() {
     cout << endl << endl;
 
     computer2.setColor("How can I describe colors with word?");
-    cout << endl << endl;
+    //cout << endl << endl;
     computer2.setColor("Red");
 
     Store store("A very long name for store! very long!!! very very!!");
