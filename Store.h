@@ -24,14 +24,19 @@ public:
         else name = Sname;
     }
 
+    //---------------------setters----------------------------
+
     void setName(const string& sname);
     void setPCNum(int PCNum);
+
+    //---------------------getters----------------------------
 
     int getPCNum();
     string getName();
 
-    void addComputer(const Computer& computer);
+//---------------------other methods----------------------------
 
+    void addComputer(const Computer& computer);
     void printComputersByName();
     void printComputersByYear();
 };

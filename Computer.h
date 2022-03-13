@@ -26,17 +26,23 @@ public:
     explicit Computer(Cpu& cpu, string manufacturer = "~", int year = 0, string color = "~", bool isLaptop = false) : cpu(cpu), manufacturer(std::move(manufacturer)), year(year), color(std::move(color)), isLaptop(isLaptop){}
     Computer(string manufacturer = "~", int year = 0, string color = "~", bool isLaptop = false) : manufacturer(std::move(manufacturer)), year(year), color(std::move(color)), isLaptop(isLaptop){}
 
+    //---------------------setters----------------------------
+
     void setManufacturer(const string& Smanufacturer);
     void setYear(const int& Syear);
     void setColor(const string& Scolor);
     void setCpu(Cpu Scpu);
     void setIsLaptop(const bool& SisLaptop);
 
+    //---------------------getters----------------------------
+
     string getManufacturer() const;
     int getYear() const;
     string getColor() const;
     Cpu getCpu();
     bool getIsLaptop() const;
+
+//---------------------other methods----------------------------
 
     void print();
 };

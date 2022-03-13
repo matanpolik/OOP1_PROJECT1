@@ -4,6 +4,8 @@
 
 #include "Cpu.h"
 
+//---------------------setters----------------------------
+
 void Cpu::setClockRate(const double& Scr){
     clockrate = Scr;
 }
@@ -17,6 +19,8 @@ void Cpu::setYear(const int& Syear){
     year = Syear;
 }
 
+//---------------------getters----------------------------
+
 double Cpu::getClockRate() const{
     return clockrate;
 }
@@ -26,6 +30,8 @@ string Cpu::getManufacturer() const{
 int Cpu::getYear() const{
     return year;
 }
+
+//---------------------other methods----------------------------
 
 void Cpu::print(){
     cout<<"Cpu clockRate: "<<clockrate<<endl;

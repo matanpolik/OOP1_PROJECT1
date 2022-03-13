@@ -4,6 +4,8 @@
 
 #include "Computer.h"
 
+//---------------------setters----------------------------
+
 void Computer::setManufacturer(const string& Smanufacturer){
     if(Smanufacturer.length() > 10){
         cout<<"manufacturer length is too long";
@@ -23,6 +25,10 @@ void Computer::setIsLaptop(const bool& SisLaptop){
     isLaptop = SisLaptop;
 }
 
+//---------------------getters----------------------------
+
+
+
 string Computer::getManufacturer() const{
     return manufacturer;
 }
@@ -38,6 +44,9 @@ Cpu Computer::getCpu(){
 bool Computer::getIsLaptop() const{
     return isLaptop;
 }
+
+//---------------------other methods----------------------------
+
 void Computer::print() {
     cpu.print();
     cout<<"Computer manufacturer: "<<manufacturer<<endl;

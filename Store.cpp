@@ -1,8 +1,9 @@
 //
 // Created by Matan Polik on 10/03/2022.
 //
-
 #include "Store.h"
+
+//---------------------setters----------------------------
 
 void Store::setName(const string& sname){
     if(sname.length() > 10){
@@ -15,12 +16,16 @@ void Store::setPCNum(int PCNum){
     numberOfComputers = PCNum;
 }
 
+//---------------------getters----------------------------
+
 int Store::getPCNum(){
     return numberOfComputers;
 }
 string Store::getName(){
     return name;
 }
+
+//---------------------other methods----------------------------
 
 void Store::addComputer(const Computer& computer){
     Computers[numberOfComputers] = computer;
